@@ -1,19 +1,34 @@
 function player_motion:internal/technical/load
 ##Gamerules
-gamerule doMobSpawning false
-gamerule doInsomnia false
-gamerule mobGriefing false
-gamerule doImmediateRespawn true
-gamerule doFireTick false
 gamerule commandBlockOutput false
+gamerule commandModificationBlockLimit 999999999
 gamerule disableElytraMovementCheck true
+gamerule disablePlayerMovementCheck true
+gamerule disableRaids true
+gamerule doDaylightCycle false
+#gamerule doEntityDrops false #Depending on if we're overwriting drops or not, this may need to stay true
+gamerule doFireTick false
+gamerule doInsomnia false
+gamerule doImmediateRespawn true
+#gamerule doMobLoot false #Depending on if we're overwriting drops or not, this may need to stay true
+gamerule doMobSpawning false
 gamerule doPatrolSpawning false
 gamerule doTileDrops false
-gamerule universalAnger true
-gamerule forgiveDeadPlayers false
 gamerule doTraderSpawning false
+gamerule doVinesSpread false
 gamerule doWeatherCycle false
+gamerule doWardenSpawning false
+#gamerule enderPearlIsVanishOnDeath true #depends on behavior w/ immediate respawn + spectator functionality
+gamerule forgiveDeadPlayers false
+gamerule functionCommandLimit 333333
 gamerule keepInventory true
+gamerule maxcommandChainLength 999999999
+gamerule maxCommandForkCount 999999999
+gamerule mobGriefing false
+gamerule naturalRegeneration false
+gamerule projectilesCanBreakBlocks false
+gamerule pvp false
+gamerule universalAnger true
 ##Stats
 scoreboard objectives add kills dummy
 scoreboard objectives add KOsSkeleWarrior dummy
@@ -250,4 +265,5 @@ team modify noCollison collisionRule never
 team modify mob color red
 team modify player color yellow
 team join player @a
+
 tellraw @a "Reload Complete!"
